@@ -1,5 +1,7 @@
 # frontendKnowledge
-<img src="barbeariaAlura/stamp.png">
+
+  <img src="barbeariaAlura/stamp.png">
+
 <hr>
 <p>
   -> Aprendizado adquirido na plataforma Alura. <br>
