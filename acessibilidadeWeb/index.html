@@ -21,12 +21,13 @@
   <link rel="stylesheet" href="css/rodape.css">    
   <link rel="stylesheet" href="css/dialogNewsletter.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
 </head>
 <body>
-
+  
+  <a href="#conteudoPrincipal" class="pularNavegacao">Pular para o conteúdo principal</a>
   <header class="cabecalho container">
-    <a href="#" class="cabecalho-logo" title="Logotipo da Apeperia">      
+    <a href="#" class="cabecalho-logo" title="Home Apeperia">      
         <svg width="205" height="59" viewBox="0 0 205 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>Logotipo Apeperia</title>
           <!-- <desc>Created using Figma</desc> -->
@@ -63,10 +64,10 @@
     </nav>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" role="main">
 
-    <section class="secaoDestaque">
-      <h1 class="secaoDestaque-titulo">
+    <section class="secaoDestaque" >
+      <h1 class="secaoDestaque-titulo" id="conteudoPrincipal">
         APLICATIVOS NA MEDIDA
       </h1>
       <h2 class="secaoDestaque-texto">
@@ -116,7 +117,7 @@
           SOBRE
         </h2>
         <p class="secaoSobre-texto">
-          Criamos aplicativos personalizados de maneira diferente e para <b>todxs</b>!
+          Criamos aplicativos personalizados de maneira diferente e para <b>todas as pessoas.</b>!
         </p>
         <p class="secaoSobre-texto">
           Preocupados com o modelo atual em que um aplicativo é criado entregue e a manutenção é vista como um custo extra para o cliente, decidimos criar um novo modelo de negócio, em que você assina nosso serviço, nós criamos o aplicativo e a manutenção já é inclusa no serviço. Dessa maneira você não se preocupa com atualização, é tudo por nossa conta.
@@ -275,22 +276,22 @@
       <div class="container">
         <h2 class="secaoDestaques-titulo tituloPadrao">DESTAQUES</h2>
 
-        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
-            <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Objetos que um artista usa, como lápis de cor e tintas.">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
+        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
+          <figure class="secaoDestaques-destaque">
+            <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
               Conheça as primeiras etapas na criação de um logotipo
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
-        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
-            <img src="img/dicas-fotografia.png" class="secaoDestaques-destaque-img" alt="Uma mulher segurando uma câmera, mostrando a um rapaz.">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
+        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link" aria-labelledby="tituloDestaque2">
+          <figure class="secaoDestaques-destaque">
+            <img src="img/dicas-fotografia.png" class="secaoDestaques-destaque-img" alt="">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
               Veja dicas de como fotografar usando seu celular
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
         <button class="secaoDestaques-form-botao btnPadrao btnPadrao--pequeno" id="abreDialog">
@@ -337,57 +338,57 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" class="contatoCampo--validouFoi" placeholder="Nome" required>
           </div>  
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for="email">Email: </label>
+            <input type="email" id="email" class="contatoCampo--validouErro" placeholder="email" required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
           </div>
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Telefone: </label>
-            <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+            <label for="telefone">Telefone: </label>
+            <input type="text" id="telefone" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
             <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
           </div>     
 
           <div class="contatoCampo">
-            <label>CEP: </label>
-            <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+            <label for="cep">CEP: </label>
+            <input type="text" id="cep" maxlength="8" placeholder="Exemplo: 04101-300" required>
           </div>
 
           <div class="contatoCampo">
-            <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <label for="endereco">Endereço: </label>
+            <input type="text" id="endereco" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
           </div>   
 
           <div class="contatoCampo">
-            <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <label for="bairro">Bairro: </label>
+            <input type="text" id="bairro" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
           </div>   
 
           <div class="contatoCampo">
-            <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <label for="cidade">Cidade: </label>
+            <input type="text" id="cidade" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
           </div>   
 
           <div class="contatoCampo">
-            <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <label for="estado">Estado: </label>
+            <input type="text" id="estado" class="contatoCampo-campoDesabilitado" readonly value="SP">
           </div>   
 
           <div class="contatoCampo">
-            <label>Mensagem: </label>
-            <textarea name="" cols="30" rows="10" required></textarea>
+            <label for="mensagem">Mensagem: </label>
+            <textarea name="" id="mensagem" cols="30" rows="10" required></textarea>
           </div>
 
           <div class="contatoCampo">
-            <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox">
-            <label class="contatoCampo-label">Receber destaques por email</label>
+            <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail">
+            <label class="contatoCampo-label" for="receberEmail">Receber destaques por email</label>
           </div>
 
           <div class="contatoCampo">
@@ -423,7 +424,8 @@
           </p>
         </div>
 
-        <video src="img/formacao-java.mp4" class="secaoInstitucional-video">
+        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls>
+          <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português(Brasil)">
         </video>
 
       </div>
