@@ -23,3 +23,13 @@ console.log("Destinos possíveis:");
 listaDeDestinos.push('Bahia');
 
 console.log(listaDeDestinos);
+
+// Removendo elementos na lista
+
+listaDeDestinos.splice(1, 1);
+
+console.log(listaDeDestinos);
+
+console.log(listaDeDestinos[1], listaDeDestinos[0]); // Exibe elemento da lista por referência.
+
+
