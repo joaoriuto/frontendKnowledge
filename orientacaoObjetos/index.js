@@ -7,25 +7,47 @@
 
 class Cliente {
     nome;
-    cpf;
+    cpf;   
+}
+
+class ContaCorrente {
     agencia;
-    saldo;
-    rg;
+    _saldo;
+
+    sacar(valor) {
+        if(this._saldo >= valor) {
+            this._saldo -= valor;
+        } else (
+            console.log("Saldo insuficiente.")
+        )
+    }
+
+    depositar(valor) {
+       if(valor > 0 ){
+           this._saldo += valor;
+       } else {
+           console.log("O valor não é suportado.");
+       }
+    }
 }
 
 const cliente1 = new Cliente();
 const cliente2 = new Cliente();
 
+const contaCorrenteJoao = new ContaCorrente();
+contaCorrenteJoao._saldo = 0;
+contaCorrenteJoao.agencia = 1010;
+
+console.log(contaCorrenteJoao._saldo);
+contaCorrenteJoao.depositar(500);
+console.log(contaCorrenteJoao._saldo);
+
 cliente1.nome = "João";
 cliente1.cpf = 392745;
-cliente1.agencia = 1010;
-cliente1.saldo = 1000000;
-cliente1.rg = 2345462;
+
 
 cliente2.nome = "Vera";
 cliente2.cpf = 6789780;
-cliente2.agencia = 1010;
-cliente2.saldo = 6789678;
-cliente2.rg = 45674567;
+
 
 console.log(cliente1, "\n", cliente2);
