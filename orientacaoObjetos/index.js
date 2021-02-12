@@ -7,7 +7,7 @@
 
 class Cliente {
     nome;
-    cpf;   
+    cpf;
 }
 
 class ContaCorrente {
@@ -15,19 +15,20 @@ class ContaCorrente {
     _saldo;
 
     sacar(valor) {
-        if(this._saldo >= valor) {
+        if (this._saldo >= valor) {
             this._saldo -= valor;
+            return valor;
         } else (
             console.log("Saldo insuficiente.")
         )
     }
 
     depositar(valor) {
-       if(valor > 0 ){
-           this._saldo += valor;
-       } else {
-           console.log("O valor não é suportado.");
-       }
+        if (valor <= 0) {
+           return console.log("O valor não é suportado.");
+        } else {
+            this._saldo += valor;
+        }
     }
 }
 
@@ -38,9 +39,11 @@ const contaCorrenteJoao = new ContaCorrente();
 contaCorrenteJoao._saldo = 0;
 contaCorrenteJoao.agencia = 1010;
 
-console.log(contaCorrenteJoao._saldo);
 contaCorrenteJoao.depositar(500);
+
+const valorSacado = contaCorrenteJoao.sacar(50);
 console.log(contaCorrenteJoao._saldo);
+console.log(valorSacado);
 
 cliente1.nome = "João";
 cliente1.cpf = 392745;
