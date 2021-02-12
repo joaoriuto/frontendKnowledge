@@ -12,25 +12,25 @@ class Cliente {
 
 class ContaCorrente {
     agencia;
-    _saldo;
+    _saldo; // Modo private
 
     sacar(valor) {
         if (this._saldo >= valor) {
             this._saldo -= valor;
-            return valor;
+            return valor; // Retorna o valor para o cliente
         } else (
             console.log("Saldo insuficiente.")
-        )
-    }
+        );
+    };
 
     depositar(valor) {
         if (valor <= 0) {
-           return console.log("O valor não é suportado.");
+           return console.log("O valor não foi aceito.");
         } else {
             this._saldo += valor;
-        }
-    }
-}
+        };
+    };
+}; // fim classe
 
 const cliente1 = new Cliente();
 const cliente2 = new Cliente();
@@ -41,9 +41,6 @@ contaCorrenteJoao.agencia = 1010;
 
 contaCorrenteJoao.depositar(500);
 
-const valorSacado = contaCorrenteJoao.sacar(50);
-console.log(contaCorrenteJoao._saldo);
-console.log(valorSacado);
 
 cliente1.nome = "João";
 cliente1.cpf = 392745;
@@ -52,5 +49,8 @@ cliente1.cpf = 392745;
 cliente2.nome = "Vera";
 cliente2.cpf = 6789780;
 
+const valorSacado = contaCorrenteJoao.sacar(42);
+console.log(`Saque no valor de: R$ ${valorSacado} realizado com sucesso!`);
+console.log(`O saldo atual é: R$ ${contaCorrenteJoao._saldo}`);
 
 console.log(cliente1, "\n", cliente2);
