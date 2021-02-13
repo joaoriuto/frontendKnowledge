@@ -37,7 +37,7 @@ class Personagem {
         if(forcaAtaque > 0){
             this._pontosForca += forcaAtaque;
         } else {
-            this._pontosVida -= forcaAtaque;
+            this._pontosVida += forcaAtaque;
         };
         return forcaAtaque;
     }
@@ -51,6 +51,7 @@ harryTester.tipoArma = "inteligẽncia";
 harryTester.bio = "Bruxão maluco voador nascido em The Rivia";
 harryTester.acrescentarVida(100);
 harryTester.atacar(56);
+harryTester.sofrerDano(25);
 
 
 console.log(harryTester);
